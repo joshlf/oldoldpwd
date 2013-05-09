@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# Change only once in production
-BASH_LOGOUT='bash_logout'
-BASH_PROFILE='bash_profile'
-BASHRC='bashrc'
+BASH_LOGOUT='~/.bash_logout'
+BASH_PROFILE='~/.bash_profile'
+BASHRC='~/.bashrc'
 
 BASH_LOGOUT_SCRIPT='if [ $(pwd) != ~ ] ; then pwd > ~/.logout_pwd; fi;'
 ALIAS_EXIT='alias exit='"'"'if [ $(pwd) != ~ ] ; then pwd > ~/.logout_pwd; fi; exit'"'"
@@ -47,10 +46,3 @@ if [ $NON_LOGIN_SHELL ] ; then
 	echo $ALIAS_LOGOUT >> $BASHRC
 	echo $SET_OLDPWD >> $BASHRC
 fi
-
-
-
-
-
-
-
