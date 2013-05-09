@@ -7,4 +7,6 @@ This project saves your present working directory when you leave a shell - eithe
 
 ###Installation
 
-`curl -s --insecure https://raw.github.com/joshlf13/oldoldpwd/master/install.sh > /tmp/oldoldpwd.sh && bash /tmp/oldoldpwd.sh`
+<pre>
+curl -s --insecure https://raw.github.com/joshlf13/oldoldpwd/master/install.sh > /tmp/oldoldpwd.sh && bash /tmp/oldoldpwd.sh
+</pre>
