@@ -1,12 +1,12 @@
+#!/bin/bash
+
 # Copyright 2013 The Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style
 # license that can be found in the LICENSE file.
 
-#!/bin/bash
-
-BASH_LOGOUT='~/.bash_logout'
-BASH_PROFILE='~/.bash_profile'
-BASHRC='~/.bashrc'
+BASH_LOGOUT="$HOME/.bash_logout"
+BASH_PROFILE="$HOME/.bash_profile"
+BASHRC="$HOME/.bashrc"
 
 BASH_LOGOUT_SCRIPT='if [ $(pwd) != ~ ] ; then pwd > ~/.logout_pwd; fi;'
 ALIAS_EXIT='alias exit='"'"'if [ $(pwd) != ~ ] ; then pwd > ~/.logout_pwd; fi; exit'"'"
@@ -43,10 +43,12 @@ if [ "$NON_LOGIN_SHELL" == "Y" -o "$NON_LOGIN_SHELL" == "y" ] ; then NON_LOGIN_S
 if [ $LOGIN_SHELL ] ; then
 	echo $BASH_LOGOUT_SCRIPT >> $BASH_LOGOUT
 	echo $SET_OLDPWD >> $BASH_PROFILE
+	touch $HOME/.logout_pwd
 fi
 
 if [ $NON_LOGIN_SHELL ] ; then
 	echo $ALIAS_EXIT >> $BASHRC
 	echo $ALIAS_LOGOUT >> $BASHRC
 	echo $SET_OLDPWD >> $BASHRC
+	touch $HOME/.logout_pwd
 fi
