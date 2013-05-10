@@ -17,4 +17,4 @@ The code files (other than `install.sh`) contain code that should be inserted in
 
 ###Future Plans
 
-Eventually, I hope to port this to shells other than the bash shell.
+Eventually, I hope to port this to shells other than the bash shell. Contributions are welcome!
